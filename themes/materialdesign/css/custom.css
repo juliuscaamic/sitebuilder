@@ -1,0 +1,35 @@
+.presentation-page .section-content, .index-page .section-content {
+	padding-top: 100px !important;
+}
+
+/**
+ * Common
+ */
+p {
+	font-size: 1.25em;
+	line-height: 1.55em;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+/**
+ * Form
+ */
+label {
+	font-size: 1.25em !important;
+}
+
+/**
+ * Text Block
+ */
+
+/**
+ * Image Block
+ */
+
+/**
+ * Block Map
+ */
+.contactus-2 .card-contact {
+	padding: 20px;
+}
