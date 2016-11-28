@@ -1,4 +1,40 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Roboto Slab","Times New Roman",serif;
+}
+
+h1 {
+  font-size: 3.8em;
+  line-height: 1.15em;
+}
+
+h2 {
+  font-size: 2.6em;
+}
+
+h3 {
+  font-size: 1.825em;
+  line-height: 1.4em;
+  margin: 20px 0 10px;
+}
+
+h4 {
+  font-size: 1.3em;
+  line-height: 1.55em;
+}
+
+h5 {
+  font-size: 1.25em;
+  line-height: 1.55em;
+  margin-bottom: 15px;
+}
+
+h6 {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 p {
-	font-family: 'Avenir Next', sans-serif;
-	font-size: 14px;
+	font-family: "Roboto","Helvetica","Arial",sans-serif;
+	font-size: 12px;
 }

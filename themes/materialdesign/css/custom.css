@@ -33,3 +33,17 @@ label {
 .contactus-2 .card-contact {
 	padding: 20px;
 }
+
+/**
+ * Blog
+ */
+.blog-item .content p {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5, .blog-post h6 {
+	font-family: "Roboto Slab","Times New Roman",serif;
+}
+
+.pagination > li > a,
+.pagination > li > span {font-size: 14px;}

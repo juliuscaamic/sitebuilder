@@ -127,8 +127,7 @@ class UserForm extends Form
 		$clearText = ($this->controller->ClearButtonText) ? $this->controller->ClearButtonText : _t('UserDefinedForm.CLEARBUTTON', 'Clear');
 
 		$actions = new FieldList(
-			FormAction::create("process", $submitText)
-				->addExtraClass('btn btn-primary')
+			new FormAction("process", $submitText)
 		);
 
 		if($this->controller->ShowClearButton) {
@@ -136,7 +135,6 @@ class UserForm extends Form
 		}
 
 		$this->extend('updateFormActions', $actions);
-
         $actions->setForm($this);
 		return $actions;
 	}
