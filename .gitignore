@@ -9,3 +9,9 @@ _ss_environment.php
 
 # ignore composer vendor folder
 /vendor/
+
+.htaccess
+
+.htaccess
+
+Archive.zip

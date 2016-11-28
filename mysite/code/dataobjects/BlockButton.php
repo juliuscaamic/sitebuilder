@@ -8,6 +8,8 @@ class BlockButton extends DataObject {
 	private static $has_one = array(
 		'Block' => 'Block', 
 		'Banner' => 'BlockBanner', 
+		'Tab' => 'BlockTab', 
+		'Testimonial' => 'BlockTestimonial', 
 		'RedirectPage' => 'SiteTree', 
 	);
 
@@ -20,7 +22,7 @@ class BlockButton extends DataObject {
 
 		$fields->removeFieldsFromTab(
 			'Root.Main', 
-			array('BlockID', 'BannerID')
+			array('BlockID', 'BannerID', 'TabID', 'TestimonialID')
 		);
 
 		$fields->replaceField(
