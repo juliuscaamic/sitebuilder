@@ -1,6 +1,6 @@
 <section class="section section-content">
 	<div class="contactus-2">
-		<div id="contactUs2Map" class="map"></div>
+		<div id="block-map" class="map"></div>
 
 		<div class="container">
 			<div class="row">

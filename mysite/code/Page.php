@@ -46,14 +46,21 @@ class Page_Controller extends ContentController {
 		Requirements::javascript('themes/materialdesign/js/jquery.dropdown.js');
 		Requirements::javascript('themes/materialdesign/js/jquery.tagsinput.js');
 		Requirements::javascript('themes/materialdesign/js/jasny-bootstrap.min.js');
-		Requirements::javascript('https://maps.googleapis.com/maps/api/js?v=3.exp');
+
+		Requirements::javascript('https://maps.googleapis.com/maps/api/js?key=AIzaSyAHmjHJHUNznEmKIQ_bRqb6k65cR8DefUg');
 		Requirements::javascript('themes/materialdesign/js/material-kit.js');
-		Requirements::customScript(<<<JS
-			$().ready(function(){
-				materialKitDemo.initContactUs2Map();
-			});
+
+		$mapBlock = $this->Blocks()->find('ClassName', 'MapBlock');
+		if ($mapBlock) {
+			Requirements::customScript(<<<JS
+				$(document).ready(function(){
+					var lat = "$mapBlock->Latitude";
+					var long = "$mapBlock->Longitude";
+					materialKitDemo.initMap(lat, long);
+				});
 JS
-		);
+			);
+		}
 
 		Requirements::block('framework/thirdparty/jquery/jquery.js');
 		Requirements::block('userforms/thirdparty/jquery-validate/jquery.validate.min.js');
