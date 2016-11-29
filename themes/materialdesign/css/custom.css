@@ -28,9 +28,14 @@ label {
  */
 
 /**
+ * Feature Block
+ */
+
+
+/**
  * Block Map
  */
-.contactus-2 .map {height: 50%;}
+.contactus-2 .map {}
 .contactus-2 .card-contact {
 	padding: 20px;
 }

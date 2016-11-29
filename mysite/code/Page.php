@@ -1,26 +1,8 @@
 <?php
 class Page extends SiteTree {
 
-	private static $db = array(
-		'Subtitle' => 'Text'
-	);
-
-	private static $has_one = array(
-		'HeaderImage' => 'Image'
-	);
-
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-
-		$fields->insertBefore(
-			'Content', 
-			TextField::create('Subtitle', 'Subtitle')
-		);
-
-		$fields->insertAfter(
-			'Content', 
-			UploadField::create('HeaderImage', 'Header Image')
-		);
 
 		return $fields;
 	}
@@ -50,16 +32,18 @@ class Page_Controller extends ContentController {
 		Requirements::javascript('https://maps.googleapis.com/maps/api/js?key=AIzaSyAHmjHJHUNznEmKIQ_bRqb6k65cR8DefUg');
 		Requirements::javascript('themes/materialdesign/js/material-kit.js');
 
-		$mapBlock = $this->Blocks()->find('ClassName', 'MapBlock');
-		if ($mapBlock) {
-			Requirements::customScript(<<<JS
-				$(document).ready(function(){
-					var lat = "$mapBlock->Latitude";
-					var long = "$mapBlock->Longitude";
-					materialKitDemo.initMap(lat, long);
-				});
+		$mapBlocks = $this->Blocks()->filterAny(array('ClassName' => 'MapBlock', 'ClassName' => 'ContactBlock'));
+		if ($mapBlocks->exists()) {
+			foreach ($mapBlocks as $block) {
+				Requirements::customScript(<<<JS
+					$(document).ready(function(){
+						var lat = "$block->Latitude";
+						var long = "$block->Longitude";
+						materialKitDemo.initMap(lat, long);
+					});
 JS
-			);
+				);
+			}
 		}
 
 		Requirements::block('framework/thirdparty/jquery/jquery.js');
