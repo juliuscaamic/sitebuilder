@@ -1,7 +1,10 @@
 <?php
-class HomePage extends Page {}
+class HomePage extends UserDefinedForm {
 
-class HomePage_Controller extends Page_Controller {
+	private static $icon = 'mysite/images/home.png';
+}
+
+class HomePage_Controller extends UserDefinedForm_Controller {
 
 	public function init() {
 		parent::init();

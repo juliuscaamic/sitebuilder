@@ -54,5 +54,13 @@ class Page_Controller extends ContentController {
 			});
 JS
 		);
+
+		Requirements::block('framework/thirdparty/jquery/jquery.js');
+		Requirements::block('userforms/thirdparty/jquery-validate/jquery.validate.min.js');
+		Requirements::block('framework/javascript/i18n.js');
+		Requirements::block('userforms/javascript/lang/en.js');
+		Requirements::block('userforms/javascript/lang/en_US.js');
+		Requirements::block('userforms/javascript/UserForm.js');
+		Requirements::block('userforms/thirdparty/jquery.are-you-sure/jquery.are-you-sure.js');
 	}
 }

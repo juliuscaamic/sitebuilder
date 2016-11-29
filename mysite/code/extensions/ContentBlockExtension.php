@@ -1,6 +1,10 @@
 <?php
 class ContentBlock_Extension extends DataExtension {
 
+	private static $has_one= array(
+		'BackgroundImage' => 'Image'
+	);
+
 	private static $has_many = array(
 		'Buttons' => 'BlockButton'
 	);
@@ -15,6 +19,11 @@ class ContentBlock_Extension extends DataExtension {
 				$this->owner->Buttons(), 
 				GridFieldConfig_RelationEditor::create()
 			)
+		);
+
+		$fields->addFieldToTab(
+			'Root.Main', 
+			UploadField::create('BackgroundImage', 'Background Image')
 		);
 	}
 }
