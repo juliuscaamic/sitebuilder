@@ -13,11 +13,7 @@
 </head>
 <body class="section-white">
 
-    <% include Header %>
-
     $Layout
-
-    <% include Footer %>
 
 </body>
 </html>

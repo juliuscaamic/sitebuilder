@@ -10,6 +10,9 @@ After:
 SSViewer:
   theme: 'simple'
 
+SiteConfig:
+  extensions:
+    - SiteConfig_Extension
 Block:
   extensions:
     - ContentBlock_Extension

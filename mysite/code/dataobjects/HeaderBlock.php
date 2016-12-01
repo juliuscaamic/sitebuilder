@@ -13,6 +13,11 @@ class HeaderBlock extends TextBlock {
 		$fields->removeByName('Buttons');
 		$fields->removeByName('Banners');
 
+		$fields->removeFieldsFromTab(
+			'Root.Main', 
+			array('BackgroundImage')
+		);
+
 		$fields->addFieldToTab(
 			'Root.Main', 
 			GridField::create(
