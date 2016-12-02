@@ -15,7 +15,7 @@
 			</div>
 		<% end_if %>
 
-		<div class="col-md-4">
+		<div class="col-md-4 col-md-offset-1">
 			<div class="input-group">
 				<span class="input-group-addon">
 					<i class="material-icons">face</i>
@@ -38,7 +38,7 @@
 		$Fields.dataFieldByName(ListCode)
 		$Fields.dataFieldByName(SecurityID)
 		<% if $Actions %>
-		<div class="col-sm-4">
+		<div class="col-sm-3">
 			<% loop $Actions %>$Field<% end_loop %>
 		</div>
 		<% end_if %>
