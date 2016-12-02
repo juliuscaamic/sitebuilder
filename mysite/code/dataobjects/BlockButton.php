@@ -2,7 +2,8 @@
 class BlockButton extends DataObject {
 
 	private static $db = array(
-		'Title' => 'Varchar'
+		'Title' => 'Varchar', 
+		'Icon' => 'Varchar'
 	);
 
 	private static $has_one = array(

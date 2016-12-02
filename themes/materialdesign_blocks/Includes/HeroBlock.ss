@@ -39,26 +39,62 @@
         </div>
     </div>
 </nav>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	<div class="carousel slide" data-ride="carousel">
 
-<div id="headerBlock" class="page-header <% if $BackgroundImage %>header-filter<% end_if %>" style="<% if $BackgroundColor %>background-color:#{$BackgroundColor};<% end_if %> <% if $BackgroundImage %>background-image:url('$BackgroundImage.Link');<% end_if %>;">
-	<div class="container">
-        <div class="row">
-            <div class="col-md-<% if $Image %>7<% else %>12<% end_if %>">
-                <h1 class="title">$Title</h1>
-                $Content
-                <% if $Buttons %>
-                    <% loop $Buttons %>
-                        <a class="btn btn-lg btn-round btn-primary" href=""></a>
-                    <% end_loop %>
-                <% end_if %>
-            </div>
-            <% if $Image %>
-                <div class="col-md-5">
-                    <div class="card-image">
-                        <img class="img" src="$Image.Link" alt="$Image.Title">
-                    </div>
-                </div>
-            <% end_if %>
-        </div>            
-    </div>
-</div>
+		<% if $IsRotatingBanner %>
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<% loop $Banners %>
+					<li data-target="#carousel-example-generic" data-slide-to="$IndexNumber($Pos)" class="<% if $First %>active<% end_if %>"></li>
+				<% end_loop %>
+			</ol>
+		<% end_if %>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<% loop $Banners %>
+				<div class="item <% if $First %>active<% end_if %>">
+					<div class="page-header header-filter" style="background-image: url('$BackgroundImage.Link');">
+
+						<div class="container">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 text-left">
+									<h1 class="title">$Title</h1>
+									<h4>$Content</h4>
+									<br />
+
+									<% if $Buttons %>
+										<div class="buttons">
+											<% loop $Buttons %>
+											<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title" class="btn btn-primary btn-round btn-lg">
+												$Title
+												<% if $Icon %>
+													<i class="material-icons">$Icon</i>
+												<% end_if %>
+											</a>
+											<% end_loop %>
+										</div>
+									<% end_if %>
+								</div>
+							</div>
+						</div>
+			        </div>
+
+				</div>
+			<% end_loop %>
+
+		</div>
+
+		<% if $IsRotatingBanner %>
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+				<i class="material-icons">keyboard_arrow_left</i>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+				<i class="material-icons">keyboard_arrow_right</i>
+			</a>
+		<% end_if %>
+
+	</div>
+</div>    

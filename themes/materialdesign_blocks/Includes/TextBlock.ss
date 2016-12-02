@@ -1,4 +1,4 @@
-<section class="section section-content textblock">
+<section id="textBlock" class="section section-content <% if $BackgroundImage %>header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor}<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">

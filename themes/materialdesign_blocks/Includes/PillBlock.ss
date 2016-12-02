@@ -38,7 +38,12 @@
 													$Content
 													<% if $Buttons %>
 														<% loop $Buttons %>
-															<a class="btn btn-round btn-primary" href="$RediectPage.Link" title="Go to $RedirectPage.Title">$Title</a>
+															<a class="btn btn-lg btn-round btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title">
+																$Title
+																<% if $Icon %>
+																	<i class="material-icons">$Icon</i>
+																<% end_if %>
+															</a>
 														<% end_loop %>
 													<% end_if %>
 												</div>
@@ -74,7 +79,12 @@
 											$Content
 											<% if $Buttons %>
 												<% loop $Buttons %>
-													<a class="btn btn-round btn-primary" href="$RediectPage.Link" title="Go to $RedirectPage.Title">$Title</a>
+													<a class="btn btn-lg btn-round btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title">
+														$Title
+														<% if $Icon %>
+															<i class="material-icons">$Icon</i>
+														<% end_if %>
+													</a>
 												<% end_loop %>
 											<% end_if %>
 										</div>

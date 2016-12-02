@@ -13,7 +13,7 @@ class BlockBanner extends DataObject {
 	 */
 	private static $db = array(
 		'Title' => 'Text', 
-		'Content' => 'Text'
+		'Content' => 'HTMLText'
 	);
 
 	/**
@@ -23,7 +23,7 @@ class BlockBanner extends DataObject {
 	 */
 	private static $has_one = array(
 		'BackgroundImage' => 'Image', 
-		'Block' => 'HeaderBlock'
+		'Block' => 'HeroBlock'
 	);
 
 	/**
@@ -62,6 +62,9 @@ class BlockBanner extends DataObject {
 			'Title', 
 			TextField::create('Title', 'Title')
 		);
+
+		$fields->dataFieldByName('Content')
+			->setRows(20);
 
 		return $fields;
 	}

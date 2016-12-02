@@ -1,6 +1,10 @@
 <?php
 class ContentBlock_Extension extends DataExtension {
 
+	private static $db = array(
+		'BackgroundColor' => 'Color'
+	);
+
 	private static $has_one= array(
 		'BackgroundImage' => 'Image'
 	);
@@ -10,15 +14,10 @@ class ContentBlock_Extension extends DataExtension {
 	);
 
 	public function updateCMSFields(FieldList $fields) {
-		$fields->removeByName('Buttons');
-		$fields->addFieldToTab(
-			'Root.Main', 
-			GridField::create(
-				'Buttons', 
-				'Buttons', 
-				$this->owner->Buttons(), 
-				GridFieldConfig_RelationEditor::create()
-			)
+
+		$fields->insertBefore(
+			'BackgroundImage', 
+			$fields->dataFieldByName('BackgroundColor')
 		);
 
 		$fields->addFieldToTab(

@@ -23,19 +23,10 @@ class TabBlock extends TextBlock {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
+		$fields->removeByName('Buttons');
 		$fields->removeFieldsFromTab(
 			'Root.Main', 
-			array('Content', 'Buttons', 'BackgroundImage')
-		);
-
-		$fields->addFieldToTab(
-			'Root.Main', 
-			GridField::create(
-				'Tabs', 
-				'Tabs', 
-				$this->owner->Tabs(), 
-				GridFieldConfig_RelationEditor::create()
-			)
+			array('Content', 'Buttons', 'BackgroundImage', 'BackgroundColor')
 		);
 
 		return $fields;
