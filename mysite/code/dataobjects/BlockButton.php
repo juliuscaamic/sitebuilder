@@ -11,6 +11,7 @@ class BlockButton extends DataObject {
 		'Banner' => 'BlockBanner', 
 		'Tab' => 'BlockTab', 
 		'Testimonial' => 'BlockTestimonial', 
+		'Card' => 'Card', 
 		'RedirectPage' => 'SiteTree', 
 	);
 
@@ -23,7 +24,7 @@ class BlockButton extends DataObject {
 
 		$fields->removeFieldsFromTab(
 			'Root.Main', 
-			array('BlockID', 'BannerID', 'TabID', 'TestimonialID')
+			array('BlockID', 'BannerID', 'TabID', 'TestimonialID', 'CardID')
 		);
 
 		$fields->replaceField(
