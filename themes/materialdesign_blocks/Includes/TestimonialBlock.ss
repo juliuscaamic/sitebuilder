@@ -1,4 +1,4 @@
-<section class="section section-dark testimonials-2">
+<section id="testimonialBlock" class="section testimonials-2 <% if $BackgroundImage %>section-dark header-filter<% end_if %>" style="<% if $BackgroundColor %>background-color: #{$BackgroundColor};<% end_if %> <% if $BackgroundImage %>background-image:url('$BackgroundImage.Link');<% end_if %>">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 text-center">
@@ -15,7 +15,7 @@
 								<div class="card card-testimonial card-plain">
 									<div class="card-avatar">
 										<a href="#pablo">
-											<img class="img" src="$Image.Link" alt="$Image.Title" />
+											<img class="img" src="$Image.CroppedImage(250, 250).Link" alt="$Image.Title" />
 										</a>
 									</div>
 

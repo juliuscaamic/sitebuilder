@@ -7,6 +7,7 @@
  */
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Roboto Slab","Times New Roman",serif;
+	font-weight: 700;
 }
 p {
 	font-size: 1.25em;
@@ -225,6 +226,13 @@ label {
  */
 
 /**
+ * Video Block
+ */
+#videoBlock.header-filter h1, #videoBlock.header-filter h2, #videoBlock.header-filter p {
+	color: #FFF !important;
+}
+
+/**
  * Feature Block
  */
 
@@ -236,6 +244,7 @@ label {
 .contactus-2 .card-contact {
 	padding: 20px;
 }
+
 
 /**
  * Blog

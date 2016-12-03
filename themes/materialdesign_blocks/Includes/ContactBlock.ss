@@ -1,4 +1,4 @@
-<section class="section section-content">
+<section class="cd-section">
 	<div class="contactus-2">
 		<div id="block-map" class="map"></div>
 			<div class="card card-contact card-raised">

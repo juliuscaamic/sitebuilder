@@ -12,7 +12,7 @@ class ImageBlock extends TextBlock {
 	 * @var array
 	 */
 	private static $db = array(
-		'Position' => 'Enum("Right, Left", "Right")'
+		'Position' => 'Enum("Right, Left, Center", "Right")'
 	);
 
 	/**
