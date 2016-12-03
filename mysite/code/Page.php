@@ -1,6 +1,16 @@
 <?php
+/**
+ * Represents the generic page
+ *
+ * @author Julius <julius@sentromedia.com>
+ */
 class Page extends SiteTree {
 
+	/**
+	 * Get CMS Fields
+	 * 
+	 * @return FieldList
+	 */
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
@@ -8,6 +18,11 @@ class Page extends SiteTree {
 	}
 }
 
+/**
+ * Represents the page controller
+ *
+ * @author Julius <julius@sentromedia.com>
+ */
 class Page_Controller extends ContentController {
 
 	public function init() {
@@ -17,6 +32,9 @@ class Page_Controller extends ContentController {
 		Requirements::css('https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css');
 		Requirements::css('themes/materialdesign/css/bootstrap.min.css');
 		Requirements::css('themes/materialdesign/css/material-kit.css');
+
+		Requirements::css('themes/materialdesign/vendors/material-photo-gallery/css/material-photo-gallery.css');
+
 		Requirements::css('themes/materialdesign/css/custom.css');
 
 		Requirements::javascript('themes/materialdesign/js/jquery.min.js');
@@ -31,6 +49,13 @@ class Page_Controller extends ContentController {
 
 		Requirements::javascript('https://maps.googleapis.com/maps/api/js?key=AIzaSyAHmjHJHUNznEmKIQ_bRqb6k65cR8DefUg');
 		Requirements::javascript('themes/materialdesign/js/material-kit.js');
+
+		Requirements::javascript('themes/materialdesign/vendors/material-photo-gallery/js/material-photo-gallery.min.js');
+		Requirements::customScript(<<<JS
+			var elem = document.querySelector('.m-p-g');
+			var gallery = new MaterialPhotoGallery(elem);
+JS
+		);
 
 		$mapBlocks = $this->Blocks()->filterAny(array('ClassName' => 'MapBlock', 'ClassName' => 'ContactBlock'));
 		if ($mapBlocks->exists()) {

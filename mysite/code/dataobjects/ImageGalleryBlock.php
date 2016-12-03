@@ -13,6 +13,7 @@ class ImageGalleryBlock extends Block {
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName('ImageGalleries');
+		$fields->removeByName('BackgroundImage');
 		$fields->dataFieldByName('Content')
 			->setRows(20);
 

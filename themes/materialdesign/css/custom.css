@@ -226,6 +226,13 @@ label {
  */
 
 /**
+ * Image Gallery Block
+ */
+.m-p-g {
+	margin: 0;
+}
+
+/**
  * Video Block
  */
 #videoBlock.header-filter h1, #videoBlock.header-filter h2, #videoBlock.header-filter p {
