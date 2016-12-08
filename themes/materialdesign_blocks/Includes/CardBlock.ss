@@ -1,10 +1,14 @@
-<section class="section section-content cd-section imageblock <% if $BackgroundImage %>header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor}<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
+<section class="cardBlock" class="section section-content cd-section <% if $BackgroundImage %>header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor}<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
 	<div class="cards">
 		<div class="container">
-			<div class="title">
-    			<h2>$Title</h2>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="title">
+		    			<h2>$Title</h2>
+					</div>
+					$Content
+				</div>
 			</div>
-			$Content
 
 			<div class="row">
 				<% if $Cards %>
