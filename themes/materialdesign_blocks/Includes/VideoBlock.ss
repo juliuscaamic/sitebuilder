@@ -4,7 +4,7 @@
 			<% if VideoLeft %>
 				<div class="col-md-5">
                     <div class="iframe-container">
-                        <iframe src="$VideoURL" frameborder="0" allowfullscreen height="250"></iframe>
+                        <iframe src="{$VideoURL}?modestbranding=1&autohide=1&showinfo=0" frameborder="0" allowfullscreen height="250"></iframe>
                     </div>
 				</div>
 				<div class="col-md-7">
@@ -42,7 +42,7 @@
 				</div>
 				<div class="col-md-5 col-md-offset-1">
                     <div class="iframe-container">
-                        <iframe src="$VideoURL" frameborder="0" allowfullscreen height="250"></iframe>
+                        <iframe src="{$VideoURL}?modestbranding=1&autohide=1&showinfo=0" frameborder="0" allowfullscreen height="250"></iframe>
                     </div>
 				</div>
 			<% end_if %>						
