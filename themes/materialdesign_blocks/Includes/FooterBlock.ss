@@ -1,4 +1,4 @@
-<footer class="footer footer-black footer-big">
+<footer id="footerBlock" class="footer footer-big <% if $BackgroundImage %>header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor}<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
 	<div class="container">
 
 		<div class="content">
@@ -6,11 +6,11 @@
 				<% if $Menus %>
 					<% loop $Menus %>
 						<div class="col-md-4">
-							<h5>$TiTle</h5>
+							<h5 <% if $Top.BackgroundImage || $Top.BackgroundColor %>style="color:#FFF;"<% end_if %>>$TiTle</h5>
 							<% if $Pages %>
 								<ul class="links-vertical">
 								<% loop $Pages %>
-									<li><a href="$Page.Link" title="Go to $Page.Title.XML page">$Page.MenuTitle.XML</a></li>
+									<li><a <% if $Top.BackgroundImage || $Top.BackgroundColor %>style="color:#FFF;"<% end_if %> href="$Page.Link" title="Go to $Page.Title.XML page">$Page.MenuTitle.XML</a></li>
 								<% end_loop %>
 								</ul>
 							<% end_if %>
