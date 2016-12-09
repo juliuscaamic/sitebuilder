@@ -8,7 +8,7 @@
 
 				    <div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
 				    	<% loop $ImageGalleries %>
-			            	<img src="$Image.CroppedImage(300, 300)Link" data-full="$Image.Link" class="m-p-g__thumbs-img" />
+			            	<img src="$Image.CroppedImage(300, 300).Link" data-full="$Image.Link" class="m-p-g__thumbs-img" />
 			            <% end_loop %>
 				    </div>
 
