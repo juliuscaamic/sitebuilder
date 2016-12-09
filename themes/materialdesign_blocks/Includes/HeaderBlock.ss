@@ -53,9 +53,9 @@
                 <% end_if %>
             </div>
             <% if $Image %>
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <div class="card-image">
-                        <img class="img" src="$Image.Link" alt="$Image.Title">
+                        <img class="img-responsive img" src="$Image.SetRatioSize(600, 600, #000).Link" alt="$Image.Title">
                     </div>
                 </div>
             <% end_if %>
