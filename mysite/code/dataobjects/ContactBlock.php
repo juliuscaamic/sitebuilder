@@ -9,6 +9,11 @@ class ContactBlock extends MapBlock {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
+		$fields->removeFieldsFromTab(
+			'Root.Main', 
+			array('BackgroundImage', 'BackgroundColor')
+		);
+
 		return $fields;
 	}
 }

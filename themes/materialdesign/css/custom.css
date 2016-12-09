@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 p {
-	font-size: 1.25em;
+	font-size: 1.10em;
 	line-height: 1.55em;
 	margin-bottom: 15px;
 	margin-top: 10px;
@@ -36,7 +36,7 @@ p {
  * Form
  */
 label {
-	font-size: 1.25em !important;
+	font-size: 1.10em !important;
 }
 /**
  * Header Block
