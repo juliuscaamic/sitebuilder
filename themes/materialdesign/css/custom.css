@@ -309,10 +309,13 @@ label {
 /**
  * Footer Block
  */
-.footer-black .copyright p {
-	color: #FFF;
+.footer .copyright p {
 	font-size: 12px;
 	margin: 0;
+}
+
+.footer-black .copyright p {
+	color: #FFF;
 }
 
 .footer-black {
