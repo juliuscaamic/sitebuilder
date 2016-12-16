@@ -8,6 +8,7 @@ class FooterMenuPage extends DataObject {
 
 	private static $has_one = array(
 		'Menu' => 'FooterMenu',
+		'Block' => 'FooterSmallBlock', 
 		'Page' => 'SiteTree'
 	);
 
@@ -26,7 +27,7 @@ class FooterMenuPage extends DataObject {
 
 		$fields->removeFieldsFromTab(
 			'Root.Main', 
-			array('SortOrder', 'MenuID', 'Title')
+			array('SortOrder', 'MenuID', 'BlockID', 'Title')
 		);
 
 		$fields->replaceField(
