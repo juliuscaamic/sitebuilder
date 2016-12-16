@@ -63,4 +63,6 @@
         </div>            
     </div>
 </div>
+<% else %>
+    <div class="section-space"></div>
 <% end_if %>
