@@ -28,7 +28,7 @@
 
 										<% if $Buttons %>
 											<% loop $Buttons %>
-												<a class="btn btn-round btn-lg btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title">$Title</a>
+												<a class="btn btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title">$Title</a>
 											<% end_loop %>
 										<% end_if %>
 									</div>

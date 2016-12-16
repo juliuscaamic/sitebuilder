@@ -67,7 +67,7 @@
 									<% if $Buttons %>
 										<div class="buttons">
 											<% loop $Buttons %>
-											<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title" class="btn btn-primary btn-round btn-lg">
+											<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title" class="btn btn-primary btn-lg">
 												$Title
 												<% if $Icon %>
 													<i class="material-icons">$Icon</i>

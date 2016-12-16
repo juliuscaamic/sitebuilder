@@ -49,7 +49,7 @@
                 $Content
                 <% if $Buttons %>
                     <% loop $Buttons %>
-                        <a class="btn btn-lg btn-round btn-primary" href=""></a>
+                        <a class="btn btn-lg btn-primary" href=""></a>
                     <% end_loop %>
                 <% end_if %>
             </div>
