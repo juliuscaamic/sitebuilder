@@ -14,10 +14,10 @@
 				<% if $Cards %>
 					<% loop $Cards %>
 						<div class="col-md-4">
-							<div class="card <% if $BackgroundImage %>card-background<% else %>card-blog<% end_if %>" style="<% if $BackgroundImage %>background-image: url('$BackgroundImage.Link');<% end_if %>">
+							<div class="card <% if $BackgroundImage %>card-background<% else %>card-plain<% end_if %>" style="<% if $BackgroundImage %>background-image: url('$BackgroundImage.Link');<% end_if %>">
 								<% if $Image %>
 									<div class="card-image">
-										<a href="#pablo">
+										<a href="<% if $RedirectPage %>$RedirectPage.Link<% end_if %>">
 											<img class="img" src="$Image.Link" alt="$Image.Title" />
 										</a>
 									</div>
@@ -34,7 +34,7 @@
 
 									<% if $Buttons %>
 										<% loop $Buttons %>
-											<a class="btn btn-lg btn-round btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title">
+											<a class="btn btn-round btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title">
 												$Title 
 												<% if $Icon %>
 													<i class="material-icons">$Icon</i>
