@@ -2,11 +2,25 @@
 	<div class="cards">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-8">
 					<div class="title">
 		    			<h2>$Title</h2>
 					</div>
-					$Content
+					<div class="description semi-lead">
+						$Content
+						<% if $Buttons %>
+							<% loop $Buttons %>
+								<a class="btn btn-round btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title">
+									$Title 
+									<% if $Icon %>
+										<i class="material-icons">$Icon</i>
+									<% end_if %>
+								</a>
+							<% end_loop %>
+						<% end_if %>
+						
+					</div>
+					<div class="section-space"></div>
 				</div>
 			</div>
 
@@ -18,7 +32,7 @@
 								<% if $Image %>
 									<div class="card-image">
 										<a href="<% if $RedirectPage %>$RedirectPage.Link<% end_if %>">
-											<img class="img" src="$Image.Link" alt="$Image.Title" />
+											<img class="img" src="$Image.CroppedImage(800, 600).Link" alt="$Image.Title" />
 										</a>
 									</div>
 								<% end_if %>

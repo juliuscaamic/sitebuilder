@@ -17,6 +17,13 @@ p {
 }
 
 /**
+ * Typography
+ */
+.semi-lead {
+	font-size: 16px;
+}
+
+/**
  * Backgrounds
  */
 .bg-dark {

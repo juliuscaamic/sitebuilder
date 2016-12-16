@@ -8,8 +8,6 @@ class CardBlock extends TextBlock {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		$fields->removeByName('Buttons');
-
 		return $fields;
 	}
 }
