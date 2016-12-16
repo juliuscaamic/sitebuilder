@@ -136,7 +136,7 @@ materialKitDemo = {
             scrollwheel: false,
         }
 
-        var map = new google.maps.Map(document.getElementById("block-map"), mapOptions);
+        var map = new google.maps.Map(document.getElementById("blockMap"), mapOptions);
         var marker = new google.maps.Marker({
             position: myLatlng
         });

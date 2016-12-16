@@ -2,8 +2,9 @@
 class ContactBlock extends MapBlock {
 
 	private static $db = array(
-		'Address' => 'Text', 
-		'Contact' => 'Text'
+		'Email' => 'Text', 
+		'Contact' => 'Text', 
+		'Address' => 'Text'
 	);
 
 	public function getCMSFields() {
@@ -12,6 +13,16 @@ class ContactBlock extends MapBlock {
 		$fields->removeFieldsFromTab(
 			'Root.Main', 
 			array('BackgroundImage', 'BackgroundColor')
+		);
+
+		$fields->replaceField(
+			'Email', 
+			TextField::create('Email', 'Email')
+		);
+
+		$fields->replaceField(
+			'Contact', 
+			TextField::create('Contact', 'Contact')
 		);
 
 		return $fields;

@@ -292,6 +292,33 @@ label {
 }
 
 /**
+ * Contact Block
+ */
+#contactUsMapBlock .contact-content {
+	padding-bottom: 40px;
+	padding-top: 40px;
+}
+#contactUsMapBlock .container {
+	max-width: 970px;
+}
+#contactUsMapBlock .big-map {
+	height: 35vh;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+#contactUsMapBlock .message {
+	margin-top: 20px;
+}
+#contactUsMapBlock .info {
+	padding-bottom: 10px;
+	padding-top: 0px;
+}
+#contactUsMapBlock .info .title {
+	margin: 25px 0 10px;
+}
+
+/**
  * Card Block
  */
 .card .card-image {cursor: pointer !important;}

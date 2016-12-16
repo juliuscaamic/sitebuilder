@@ -62,8 +62,8 @@ JS
 			foreach ($mapBlocks as $block) {
 				Requirements::customScript(<<<JS
 					$(document).ready(function(){
-						var lat = "$block->Latitude";
-						var long = "$block->Longitude";
+						var lat = $block->Latitude;
+						var long = $block->Longitude;
 						materialKitDemo.initMap(lat, long);
 					});
 JS
