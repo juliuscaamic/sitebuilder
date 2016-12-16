@@ -1,4 +1,4 @@
-<nav class="navbar navbar-primary navbar-fixed-top bg-dark">
+<nav class="navbar navbar-dark navbar-fixed-top navbar-color-on-scroll navbar-transparent">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">

@@ -2201,7 +2201,7 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
 }
 .navbar .navbar-brand {
   position: relative;
-  height: 50px;
+  height: 70px;
   line-height: 30px;
   color: inherit;
   padding: 10px 15px;
@@ -2219,8 +2219,8 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
   color: inherit;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 14px;
   text-transform: uppercase;
   border-radius: 3px;
 }
@@ -2603,7 +2603,7 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
   background-color: #3f51b5;
 }
 .navbar.navbar-transparent {
-  background-color: transparent;
+  background-color: transparent !important;
   box-shadow: none;
   color: #fff;
   padding-top: 25px;

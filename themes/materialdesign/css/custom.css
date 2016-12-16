@@ -48,8 +48,40 @@ label {
 /**
  * Header Block
  */
+.navbar-right {margin-top:12px;}
+.navbar.navbar-dark {
+	background-color: #212121;
+	color: #ffffff;
+}
+.navbar.navbar-dark .navbar-form .form-group input.form-control::-moz-placeholder,
+.navbar.navbar-dark .navbar-form input.form-control::-moz-placeholder {
+	color: #ffffff;
+}
+.navbar.navbar-dark .navbar-form .form-group input.form-control:-ms-input-placeholder,
+.navbar.navbar-dark .navbar-form input.form-control:-ms-input-placeholder {
+	color: #ffffff;
+}
+.navbar.navbar-dark .navbar-form .form-group input.form-control::-webkit-input-placeholder,
+.navbar.navbar-dark .navbar-form input.form-control::-webkit-input-placeholder {
+	color: #ffffff;
+}
+.navbar.navbar-dark .dropdown-menu {
+	border-radius: 3px !important;
+}
+.navbar.navbar-dark .dropdown-menu li > a:hover, .navbar.navbar-dark .dropdown-menu li > a:focus {
+	color: #FFFFFF;
+	background-color: #212121;
+}
+.navbar.navbar-dark .dropdown-menu .active > a {
+	background-color: #212121;
+	color: #ffffff;
+}
+.navbar.navbar-dark .dropdown-menu .active > a:hover, .navbar.navbar-dark .dropdown-menu .active > a:focus {
+	color: #ffffff;
+}
+
 .logo img {
-	max-height: 40px !important;
+	max-height: 50px !important;
 }
 #headerBlock {
 	background-size: cover;
