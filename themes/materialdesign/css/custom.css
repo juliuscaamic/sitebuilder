@@ -291,6 +291,10 @@ label {
 	padding: 20px;
 }
 
+/**
+ * Card Block
+ */
+.card .card-image {cursor: pointer !important;}
 
 /**
  * Blog

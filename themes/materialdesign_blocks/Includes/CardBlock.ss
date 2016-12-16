@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-md-8">
 					<div class="title">
-		    			<h2>$Title</h2>
+		    			<h2><a href="$RedirectPage.Link" title="Go to $RedirectPage.Title">$Title</a></h2>
 					</div>
 					<div class="description semi-lead">
 						$Content

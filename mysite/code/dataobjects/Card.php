@@ -9,6 +9,7 @@ class Card extends DataObject {
 
 	private static $has_one = array(
 		'Block' => 'CardBlock', 
+		'RedirectPage' => 'SiteTree', 
 		'Image' => 'Image', 
 		'BackgroundImage' => 'Image'
 	);
@@ -33,6 +34,11 @@ class Card extends DataObject {
 		$fields->insertBefore(
 			'BackgroundImage', 
 			$fields->dataFieldByName('BackgroundColor')
+		);
+
+		$fields->replaceField(
+			'RedirectPageID', 
+			TreeDropdownField::create("RedirectPageID", "Choose a page redirect page:", "SiteTree")
 		);
 
 		$fields->dataFieldByName('Content')

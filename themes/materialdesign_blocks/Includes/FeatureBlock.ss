@@ -11,7 +11,7 @@
 				<% if $Features %>
 					<div class="row">
 						<% loop $Features %>
-							<div class="col-md-4">
+							<div class="col-md-3">
 							   	<div class="info">
 									<div class="icon icon-info">
 										<i class="material-icons">$Icon</i>
