@@ -12,7 +12,7 @@
 					<div class="row">
 						<% loop $Features %>
 							<div class="col-md-4">
-							   	<div class="info info-horizontal">
+							   	<div class="info">
 									<div class="icon icon-info">
 										<i class="material-icons">$Icon</i>
 									</div>
