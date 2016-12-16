@@ -3066,9 +3066,6 @@ h2.title {
 .carousel .carousel-control.left, .carousel .carousel-control.right {
   background-image: none;
 }
-.carousel .carousel-control.right i {
-  right: 0;
-}
 .carousel .item {
   text-align: center;
 }

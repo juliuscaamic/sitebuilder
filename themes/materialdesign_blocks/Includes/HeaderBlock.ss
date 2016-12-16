@@ -40,6 +40,7 @@
     </div>
 </nav>
 
+<% if $BackgroundImage || $BackgroundColor %>
 <div id="headerBlock" class="page-header <% if $BackgroundImage %>header-filter<% end_if %>" style="<% if $BackgroundColor %>background-color:#{$BackgroundColor};<% end_if %> <% if $BackgroundImage %>background-image:url('$BackgroundImage.Link');<% end_if %>;">
 	<div class="container">
         <div class="row">
@@ -62,3 +63,4 @@
         </div>            
     </div>
 </div>
+<% end_if %>
