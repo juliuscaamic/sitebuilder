@@ -4,7 +4,8 @@ class Card extends DataObject {
 	private static $db = array(
 		'Title' => 'Text', 
 		'Content' => 'HTMLText', 
-		'BackgroundColor' => 'Color'
+		'BackgroundColor' => 'Color', 
+		'Sort' => 'Int'
 	);
 
 	private static $has_one = array(
@@ -18,12 +19,14 @@ class Card extends DataObject {
 		'Buttons' => 'BlockButton'
 	);
 
+	private static $default_sort = 'Sort';
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		$fields->removeFieldsFromTab(
 			'Root.Main', 
-			array('BlockID')
+			array('BlockID', 'Sort')
 		);
 
 		$fields->replaceField(

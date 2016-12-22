@@ -8,6 +8,10 @@ class CardBlock extends TextBlock {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
+		$fields->dataFieldByName('Cards')
+			->getConfig()
+			->addComponent(new GridFieldOrderableRows('Sort'));
+
 		return $fields;
 	}
 }

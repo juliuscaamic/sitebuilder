@@ -322,6 +322,7 @@ label {
  * Card Block
  */
 .card .card-image {cursor: pointer !important;}
+.card .card-image a{display: block;}
 
 /**
  * Blog
