@@ -1,15 +1,4 @@
-<div class="page-header header-filter header-small" style="background-image: url('$HeaderImage.Link');">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center">
-				<h2 class="title">$Title</h1>
-				$Content
-			</div>
-		</div>
-	</div>
-</div>
-
-
+$BlockArea(BeforeContent)
 <section class="section section-content">
 	<div class="container">
 		<div class="row">
@@ -35,3 +24,5 @@
 		</div>
 	</section>
 <% end_with %>
+
+$BlockArea(AfterContent)

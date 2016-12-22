@@ -22,3 +22,4 @@ BlockManager:
     simple: 
       areas:
         AfterContent: true
+        BeforeContent: true
