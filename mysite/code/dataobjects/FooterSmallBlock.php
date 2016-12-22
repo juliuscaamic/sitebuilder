@@ -9,6 +9,10 @@ class FooterSmallBlock extends Block {
 		'MenuPages' => 'FooterMenuPage'
 	);
 
+	private static $many_many = array(
+		'SocialMediaAccounts' => 'SocialMediaAccount'
+	);
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 

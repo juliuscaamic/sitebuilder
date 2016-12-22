@@ -13,8 +13,20 @@
 			</ul>
 			<% end_if %>
 		</nav>
-		<div class="copyright pull-right">
-			$CopyrightText
-		</div>
+
+		<% if SocialMediaAccounts %>
+			<ul class="social-buttons pull-center">
+				<% loop $SocialMediaAccounts %>
+					<li>
+						<a href="$Address" target="_blank" class="btn btn-just-icon btn-simple" title="$Title">
+							<% if $Icon %>
+								<i class="$Icon"></i>
+							<% end_if %>
+						</a>
+					</li>
+				<% end_loop %>
+			</ul>
+		<% end_if %>
+		<div class="copyright pull-right">$CopyrightText</div>
 	</div>
 </footer>

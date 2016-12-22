@@ -5,7 +5,7 @@
 			<div class="row">
 				<% if $Menus %>
 					<% loop $Menus %>
-						<div class="col-md-4">
+						<div class="col-md-4 text-left">
 							<h5 <% if $Top.BackgroundImage || $Top.BackgroundColor %>style="color:#FFF;"<% end_if %>>$TiTle</h5>
 							<% if $Pages %>
 								<ul class="links-vertical">
@@ -16,6 +16,22 @@
 							<% end_if %>
 						</div>					
 					<% end_loop %>
+				<% end_if %>
+				<% if SocialMediaAccounts %>
+				<div class="col-md-4">
+					<h5 <% if $Top.BackgroundImage || $Top.BackgroundColor %>style="color:#FFF;"<% end_if %>>Follow Us</h5>
+					<ul class="social-buttons">
+						<% loop $SocialMediaAccounts %>
+							<li>
+								<a href="$Address" target="_blank" class="btn btn-just-icon btn-simple" title="$Title">
+									<% if $Icon %>
+										<i class="$Icon"></i>
+									<% end_if %>
+								</a>
+							</li>
+						<% end_loop %>
+					</ul>
+				</div>
 				<% end_if %>
 			</div>
 		</div>

@@ -2,12 +2,15 @@
 class FooterBlock extends Block {
 
 	private static $db = array(
-		'CopyrightText' => 'HTMLText', 
-		'Type' => 'Enum("Small, Big", "Small")'
+		'CopyrightText' => 'HTMLText'
 	);
 
 	private static $has_many = array(
 		'Menus' => 'FooterMenu'
+	);
+
+	private static $many_many = array(
+		'SocialMediaAccounts' => 'SocialMediaAccount'
 	);
 
 	public function getCMSFields() {
