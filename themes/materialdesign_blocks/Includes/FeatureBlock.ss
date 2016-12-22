@@ -1,36 +1,34 @@
 <section id="featureBlock" class="section section-content">
 	<div class="container">
 		<% if not $Image %>
-			<div class="features-2">
-				<div class="row">
-					<div class="col-md-12">
-						<h2 class="title">$Title</h2>
-						$Content
-					</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="title">$Title</h2>
+					$Content
 				</div>
-				<% if $Features %>
-					<div class="row">
-						<% loop $Features %>
-							<div class="col-md-3">
-							   	<div class="info">
-									<div class="icon icon-info">
-										<i class="material-icons">$Icon</i>
-									</div>
-									<div class="description">
-										<h4 class="info-title">$Title</h4>
-										<% if $Content %><p>$Content</p><% end_if %>
-										<% if $Buttons %>
-											<% loop $Buttons %>
-												<a href="#pablo">Find more...</a>
-											<% end_loop %>
-										<% end_if %>
-									</div>
-								</div>
-							</div>					
-						<% end_loop %>
-					</div>
-				<% end_if %>
 			</div>
+			<% if $Features %>
+				<div class="row">
+					<% loop $Features %>
+						<div class="col-md-3">
+						   	<div class="info">
+								<div class="icon icon-info">
+									<i class="material-icons">$Icon</i>
+								</div>
+								<div class="description">
+									<h4 class="info-title">$Title</h4>
+									<% if $Content %><p>$Content</p><% end_if %>
+									<% if $Buttons %>
+										<% loop $Buttons %>
+											<a href="#pablo">Find more...</a>
+										<% end_loop %>
+									<% end_if %>
+								</div>
+							</div>
+						</div>					
+					<% end_loop %>
+				</div>
+			<% end_if %>
 
 		<% else %>
 			<div class="features-3">
