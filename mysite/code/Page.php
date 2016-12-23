@@ -32,6 +32,7 @@ class Page_Controller extends ContentController {
 		Requirements::css('https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css');
 		Requirements::css('themes/materialdesign/css/bootstrap.min.css');
 		Requirements::css('themes/materialdesign/css/material-kit.css');
+		Requirements::css('themes/materialdesign/css/vertical-nav.css');
 
 		Requirements::css('themes/materialdesign/vendors/material-photo-gallery/css/material-photo-gallery.css');
 

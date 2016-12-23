@@ -59,9 +59,9 @@
 
 						<div class="container">
 							<div class="row">
-								<div class="col-md-10 col-md-offset-1 text-left">
+								<div class="col-md-8 <% if $Alignment == 'Center' %>col-md-offset-2 text-center<% else %>text-left<% end_if %>">
 									<h1 class="title">$Title</h1>
-									<h4>$Content</h4>
+									$Content
 									<br />
 
 									<% if $Buttons %>

@@ -5,10 +5,7 @@
 /**
  * Common
  */
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Roboto Slab","Times New Roman",serif;
-	font-weight: 700;
-}
+
 p {
 	font-size: 1.10em;
 	line-height: 1.55em;
