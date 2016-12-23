@@ -4,11 +4,17 @@ class BlockFeature extends DataObject {
 	private static $db = array(
 		'Title' => 'Text',
 		'Content' => 'Text', 
-		'Icon' => 'Varchar'
+		'Icon' => 'Varchar', 
+		'IconColor' => 'Color'
 	);
 
 	private static $has_one = array(
+		'RedirectPage' => 'SiteTree', 
 		'Block' => 'FeatureBlock'
+	);
+
+	private static $has_many = array(
+		'Buttons' => 'BlockButton'
 	);
 
 	private static $singular_name = 'Feature';
@@ -26,6 +32,11 @@ class BlockFeature extends DataObject {
 		$fields->removeFieldsFromTab(
 			'Root.Main', 
 			array('BlockID')
+		);
+
+		$fields->replaceField(
+			'RedirectPageID', 
+			TreeDropdownField::create("RedirectPageID", "Choose a redirect page:", "SiteTree")
 		);
 
 		return $fields;
