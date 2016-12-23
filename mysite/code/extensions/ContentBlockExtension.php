@@ -2,7 +2,8 @@
 class ContentBlock_Extension extends DataExtension {
 
 	private static $db = array(
-		'BackgroundColor' => 'Color'
+		'BackgroundColor' => 'Color', 
+		'Alignment' => 'Enum("Left, Center", "Left")'
 	);
 
 	private static $has_one= array(
@@ -23,6 +24,11 @@ class ContentBlock_Extension extends DataExtension {
 		$fields->addFieldToTab(
 			'Root.Main', 
 			UploadField::create('BackgroundImage', 'Background Image')
+		);
+
+		$fields->addFieldToTab(
+			'Root.Options', 
+			DropdownField::create('Alignment', 'Alignment', $this->owner->dbObject('Alignment')->enumValues())
 		);
 	}
 }

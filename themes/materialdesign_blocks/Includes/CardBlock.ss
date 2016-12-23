@@ -2,7 +2,7 @@
 	<div class="cards">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-8 <% if $Alignment == 'Center' %>col-md-offset-2 text-center<% end_if %>">
 					<div class="title">
 		    			<h2><a href="$RedirectPage.Link" title="Go to $RedirectPage.Title">$Title</a></h2>
 					</div>
@@ -27,7 +27,7 @@
 			<div class="row">
 				<% if $Cards %>
 					<% loop $Cards %>
-						<div class="col-md-4">
+						<div class="col-md-4 <% if $Top.Alignment == 'Center' %>text-center<% end_if %>">
 							<div class="card <% if $BackgroundImage %>card-background<% else %>card-plain<% end_if %>" style="<% if $BackgroundImage %>background-image: url('$BackgroundImage.Link');<% end_if %>">
 								<% if $Image %>
 									<div class="card-image">
