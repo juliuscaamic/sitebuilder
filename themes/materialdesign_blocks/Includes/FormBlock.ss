@@ -1,11 +1,11 @@
-<section id="formBlock" class="section section-content <% if $BackgroundImage %>header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor}<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
+<section id="formBlock" class="section <% if $BackgroundImage %>section-image header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor} !important<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link') no-repeat !important<% end_if %>;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
 				<h2 class="title">$Title</h2>
 				$Content
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-5 col-md-offset-1">
 				<div class="card card-contact">
 					<% if $CurrentPage.Action == finished %>
 						<div class="alert alert-info">
@@ -14,9 +14,7 @@
 							</div>
 						</div>
 					<% end_if %>
-					<div class="content">
-						$CurrentPage.Form
-					</div>
+					$CurrentPage.Form
 				</div>
 			</div>
 		</div>

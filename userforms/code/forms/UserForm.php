@@ -128,7 +128,7 @@ class UserForm extends Form
 
 		$actions = new FieldList(
 			FormAction::create("process", $submitText)
-				->addExtraClass('btn btn-lg btn-primary btn-round')
+				->addExtraClass('btn btn-lg btn-primary')
 		);
 
 		if($this->controller->ShowClearButton) {

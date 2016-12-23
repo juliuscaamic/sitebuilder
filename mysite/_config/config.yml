@@ -23,3 +23,7 @@ BlockManager:
       areas:
         AfterContent: true
         BeforeContent: true
+
+UserDefinedForm:
+    extensions:
+        - UserDefinedForm_Extension

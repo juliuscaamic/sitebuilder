@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-md-8 <% if $Alignment == 'Center' %>col-md-offset-2 text-center<% end_if %>">
 					<div class="title">
-		    			<h2><a href="$RedirectPage.Link" title="Go to $RedirectPage.Title">$Title</a></h2>
+		    			<h2 class="title"><a href="$RedirectPage.Link" title="Go to $RedirectPage.Title">$Title</a></h2>
 					</div>
 					<div class="description semi-lead">
 						$Content
