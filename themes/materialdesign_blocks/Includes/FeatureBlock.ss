@@ -2,7 +2,7 @@
 	<div class="container">
 		<% if not $Image %>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-8 <% if $Alignment == 'Center' %>col-md-offset-2 text-center<% end_if %>">
 					<h2 class="title">$Title</h2>
 					$Content
 				</div>
