@@ -3,13 +3,12 @@ class BlockFeature extends DataObject {
 
 	private static $db = array(
 		'Title' => 'Text',
-		'Content' => 'Text', 
-		'Icon' => 'Varchar', 
-		'IconColor' => 'Color'
+		'Content' => 'Text'
 	);
 
 	private static $has_one = array(
 		'RedirectPage' => 'SiteTree', 
+		'Icon' => 'File', 
 		'Block' => 'FeatureBlock'
 	);
 

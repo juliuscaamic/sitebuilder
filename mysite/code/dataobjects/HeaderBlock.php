@@ -1,9 +1,12 @@
 <?php
 class HeaderBlock extends TextBlock {
 
-	private static $has_one = array(
-		'Image' => 'Image', 
+	private static $db = array(
 		'NavigationBackgroundColor' => 'Color'
+	);
+
+	private static $has_one = array(
+		'Image' => 'Image'
 	);
 
 	public function getCMSFields() {

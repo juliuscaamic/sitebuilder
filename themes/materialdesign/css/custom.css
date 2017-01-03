@@ -42,6 +42,9 @@ p {
 label {
 	font-size: 1.10em !important;
 }
+
+.userform .left {font-weight: normal !important;}
+
 /**
  * Header Block
  */

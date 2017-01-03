@@ -12,9 +12,10 @@
 					<% loop $Features %>
 						<div class="col-md-3 <% if $Top.Alignment == 'Center' %>text-center<% end_if %>">
 						   	<div class="info">
-								<div class="icon icon-primary" <% if $IconColor %>style="color:#{$IconColor};"<% end_if %>>
-									<i class="material-icons">$Icon</i>
-								</div>
+								<% if $Icon %>
+									<img class="img" src="$Icon.Link" alt="$Icon.Title" height="100">
+								<% end_if %>
+
 								<div class="description">
 									<% if $RedirectPage %>
 										<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title page">

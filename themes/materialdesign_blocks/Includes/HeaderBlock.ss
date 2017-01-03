@@ -1,4 +1,4 @@
-<nav class="navbar navbar-primary navbar-fixed-top" style="background:#019B94;">
+<nav class="navbar navbar-dark navbar-fixed-top navbar-color-on-scroll navbar-transparent" style="<% if $NavigationBackgroundColor %>background:#{$NavigationBackgroundColor};<% end_if %>">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
