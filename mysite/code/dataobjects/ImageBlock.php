@@ -21,7 +21,7 @@ class ImageBlock extends TextBlock {
 	 * @var array
 	 */
 	private static $has_one = array(
-		'Image' => 'Image'
+		'Image' => 'File'
 	);
 
 	/**
