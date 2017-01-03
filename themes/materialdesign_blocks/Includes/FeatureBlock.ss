@@ -13,7 +13,13 @@
 						<div class="col-md-3 <% if $Top.Alignment == 'Center' %>text-center<% end_if %>">
 						   	<div class="info">
 								<% if $Icon %>
-									<img class="img" src="$Icon.Link" alt="$Icon.Title" height="100">
+									<% if $RedirectPage %>
+										<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title">
+											<img class="img" src="$Icon.Link" alt="$Icon.Title" height="100">
+										</a>
+									<% else %>
+										<img class="img" src="$Icon.Link" alt="$Icon.Title" height="100">
+									<% end_if %>
 								<% end_if %>
 
 								<div class="description">
