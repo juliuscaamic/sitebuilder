@@ -3,7 +3,9 @@
 		<div class="row">
 			<div class="col-md-6">
 				<h2 class="title">$Title</h2>
-				$Content
+				<div class="description">
+					$Content
+				</div>
 			</div>
 			<div class="col-md-5 col-md-offset-1">
 				<div class="card card-contact">

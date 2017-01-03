@@ -13,7 +13,7 @@
 /* Shadows (from mdl http://www.getmdl.io/) */
 body {
   background-color: #E5E5E5;
-  color: #3C4858;
+  color: #18252A;
 }
 body.inverse {
   background: #333333;
@@ -2920,7 +2920,7 @@ h6, .h6 {
 .footer-big h4 a,
 .media .media-heading,
 .media .media-heading a {
-  color: #3C4858;
+  color: #18262A;
   text-decoration: none;
 }
 
@@ -3286,7 +3286,7 @@ h2.title {
   margin-right: 5px;
 }
 .card .author a {
-  color: #3C4858;
+  color: #18252A;
   text-decoration: none;
 }
 .card .author a .ripple-container {
@@ -3525,7 +3525,7 @@ h2.title {
   border: 0;
 }
 .card-pricing ul li b {
-  color: #3C4858;
+  color: #18252A;
 }
 .card-pricing ul li i {
   top: 6px;
@@ -3706,7 +3706,7 @@ h2.title {
   font-weight: bolder;
 }
 .panel .panel-heading a {
-  color: #3C4858;
+  color: #18252A;
 }
 .panel .panel-heading a:hover, .panel .panel-heading a:active, .panel .panel-heading a[aria-expanded="true"] {
   color: #9c27b0;
@@ -3830,7 +3830,7 @@ hr.on-light {
   font-size: 4.4em;
 }
 .info .info-title {
-  color: #3C4858;
+  color: #18252A;
   margin: 30px 0 15px;
 }
 .info p {
@@ -4124,7 +4124,7 @@ select[data-dropdownjs][disabled] + .dropdownjs > input[readonly] {
   padding-right: 14px;
 }
 .tagsinput .tagsinput-remove-link {
-  color: #3C4858;
+  color: #18252A;
   cursor: pointer;
   font-size: 1em;
   position: absolute;
@@ -5098,7 +5098,7 @@ footer .footer-brand {
   margin-left: -15px;
 }
 footer .footer-brand:hover, footer .footer-brand:focus {
-  color: #3C4858;
+  color: #18252A;
 }
 footer .copyright {
   padding: 15px 0;

@@ -13,7 +13,7 @@
 
 					<% if $Buttons %>
 						<% loop $Buttons %>
-							<a class="btn btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title">
+							<a class="btn btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title" style="<% if $BackgroundColor %>background:#{$BackgroundColor}; box-shadow: 0 2px 2px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.14), 0 3px 1px -2px rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.2), 0 1px 5px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.12);<% end_if %><% if $TextColor %>color:#{$TextColor};<% end_if %>">
 								$Title 
 								<% if $Icon %>
 									<i class="material-icons">$Icon</i>
@@ -30,7 +30,7 @@
 
 					<% if $Buttons %>
 						<% loop $Buttons %>
-							<a class="btn btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title">
+							<a class="btn btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title" style="<% if $BackgroundColor %>background:#{$BackgroundColor}; box-shadow: 0 2px 2px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.14), 0 3px 1px -2px rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.2), 0 1px 5px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.12);<% end_if %><% if $TextColor %>color:#{$TextColor};<% end_if %>">
 								$Title 
 								<% if $Icon %>
 									<i class="material-icons">$Icon</i>

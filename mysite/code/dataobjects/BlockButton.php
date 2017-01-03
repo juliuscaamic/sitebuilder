@@ -3,7 +3,9 @@ class BlockButton extends DataObject {
 
 	private static $db = array(
 		'Title' => 'Varchar', 
-		'Icon' => 'Varchar'
+		'Icon' => 'Varchar', 
+		'TextColor' => 'Color', 
+		'BackgroundColor' => 'Color'
 	);
 
 	private static $has_one = array(
@@ -32,6 +34,16 @@ class BlockButton extends DataObject {
 		$fields->replaceField(
 			'RedirectPageID', 
 			TreeDropdownField::create('RedirectPageID', 'Choose a redirect page', 'SiteTree')
+		);
+
+		$fields->addFieldToTab(
+			'Root.Colors', 
+			$fields->dataFieldByName('TextColor', 'Text Color')
+		);
+
+		$fields->addFieldToTab(
+			'Root.Colors', 
+			$fields->dataFieldByName('BackgroundColor', 'Background Color')
 		);
 
 		return $fields;

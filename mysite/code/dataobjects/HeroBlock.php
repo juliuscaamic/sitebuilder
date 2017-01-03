@@ -1,6 +1,10 @@
 <?php
 class HeroBlock extends TextBlock {
 
+	private static $db = array(
+		'NavigationBackgroundColor' => 'Color'
+	);
+
 	private static $has_many = array(
 		'Banners' => 'BlockBanner'
 	);
@@ -15,6 +19,11 @@ class HeroBlock extends TextBlock {
 		$fields->removeFieldsFromTab(
 			'Root.Main', 
 			array('BackgroundImage', 'BackgroundColor')
+		);
+
+		$fields->addFieldToTab(
+			'Root.Color', 
+			$fields->dataFieldByName('NavigationBackgroundColor', 'Nav Background Color')
 		);
 
 		return $fields;

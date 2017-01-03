@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark navbar-fixed-top navbar-color-on-scroll navbar-transparent">
+<nav class="navbar navbar-dark navbar-fixed-top navbar-color-on-scroll navbar-transparent" style="<% if $NavigationBackgroundColor %>background:#{$NavigationBackgroundColor};<% end_if %>">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
@@ -67,12 +67,12 @@
 									<% if $Buttons %>
 										<div class="buttons">
 											<% loop $Buttons %>
-											<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title" class="btn btn-primary btn-lg">
-												$Title
-												<% if $Icon %>
-													<i class="material-icons">$Icon</i>
-												<% end_if %>
-											</a>
+												<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title" class="btn btn-primary" style="<% if $BackgroundColor %>background:#{$BackgroundColor}; box-shadow: 0 2px 2px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.14), 0 3px 1px -2px rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.2), 0 1px 5px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.12);<% end_if %><% if $TextColor %>color:#{$TextColor};<% end_if %>">
+													$Title
+													<% if $Icon %>
+														<i class="material-icons">$Icon</i>
+													<% end_if %>
+												</a>
 											<% end_loop %>
 										</div>
 									<% end_if %>
