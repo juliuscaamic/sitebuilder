@@ -1,7 +1,7 @@
 <section class="section section-content cd-section imageblock <% if $BackgroundImage %>header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor}<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-10 col-md-offset-1">
 				<h2 class="title">$Title</h2>
                 <div class="card card-plain">
                     <div class="card-content">

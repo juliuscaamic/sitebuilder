@@ -1,9 +1,11 @@
 <section id="textBlock" class="section section-content <% if $BackgroundImage %>header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor}<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-10 col-md-offset-1 <% if $Alignment == 'Center' %>text-center<% end_if %>">
 				<h2 class="title">$Title</h2>
-				$Content
+				<div class="description">
+					$Content
+				</div>
 
 				<% if $Buttons %>
 					<% loop $Buttons %>

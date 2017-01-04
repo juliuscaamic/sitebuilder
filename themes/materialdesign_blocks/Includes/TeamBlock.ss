@@ -1,7 +1,7 @@
 <section class="section section-content cd-section team-5 section-image <% if $BackgroundImage %>header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor}<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-10 col-md-offset-1">
 				<% if $Title %><h2 class="title">$Title</h2><% end_if %>
 				<% if $Content %>
 					$Content
@@ -30,13 +30,6 @@
 									<p class="card-description">
 										$Content
 									</p>
-
-									<!--
-									<div class="footer">
-										<a href="#pablo" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
-										<a href="#pablo" class="btn btn-just-icon btn-simple btn-facebook"><i class="fa fa-facebook-square"></i></a>
-										<a href="#pablo" class="btn btn-just-icon btn-simple btn-google"><i class="fa fa-google"></i></a>
-									</div>-->
 								</div>
 							</div>
 						</div>

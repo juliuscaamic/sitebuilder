@@ -44,7 +44,7 @@
 <div id="headerBlock" class="page-header <% if $BackgroundImage %>header-filter<% end_if %>" style="<% if $BackgroundColor %>background-color:#{$BackgroundColor};<% end_if %> <% if $BackgroundImage %>background-image:url('$BackgroundImage.Link');<% end_if %>;">
 	<div class="container">
         <div class="row">
-            <div class="col-md-<% if $Image %>7<% else %>12<% end_if %>">
+            <div class="col-md-<% if $Image %>7<% else %>10 col-md-offset-1<% end_if %> <% if $Alignment == 'Center' %>text-center<% end_if %>">
                 <h1 class="title">$Title</h1>
                 $Content
                 <% if $Buttons %>

@@ -18,9 +18,15 @@
                                 	<% loop $Tabs %>
 	            						<li class="<% if $First %>active<% end_if %>">
 	            							<a href="#pill-$ID" role="tab" data-toggle="tab">
-	            								<% if $TabIcon %>
-	            									<i class="material-icons">$TabIcon</i>
-	            								<% end_if %>
+												<% if $Icon %>
+													<% if $RedirectPage %>
+														<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title">
+															<img class="img" src="$Icon.Link" alt="$Icon.Title" height="60">
+														</a>
+													<% else %>
+														<img class="img" src="$Icon.Link" alt="$Icon.Title" height="60">
+													<% end_if %>
+												<% end_if %>
 
 	            								$TabTitle
 	            							</a>
@@ -61,9 +67,15 @@
 							<% loop $Tabs %>
 								<li class="<% if $First %>active<% end_if %>">
 									<a href="#pill$ID" data-toggle="tab">
-										<% if $TabIcon %>
-											<i class="material-icons">$TabIcon</i>
-										<% end_if %>
+											<% if $Icon %>
+												<% if $RedirectPage %>
+													<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title">
+														<img class="img" src="$Icon.Link" alt="$Icon.Title" height="60">
+													</a>
+												<% else %>
+													<img class="img" src="$Icon.Link" alt="$Icon.Title" height="60">
+												<% end_if %>
+											<% end_if %>
 											$TabTitle
 									</a>
 								</li>

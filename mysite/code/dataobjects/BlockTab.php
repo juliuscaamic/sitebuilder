@@ -3,12 +3,12 @@ class BlockTab extends DataObject {
 
 	private static $db = array(
 		'TabTitle' => 'Text',
-		'TabIcon' => 'Varchar', 
 		'Title' => 'Text', 
 		'Content' => 'HTMLText', 
 	);
 
 	private static $has_one = array(
+		'Icon' => 'File', 
 		'Image' => 'Image', 
 		'Block' => 'TabBlock'
 	);
