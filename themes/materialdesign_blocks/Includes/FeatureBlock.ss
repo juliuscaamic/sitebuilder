@@ -48,25 +48,34 @@
 			<div class="features-3">
 				<div class="row">
 					<div class="col-md-6">
-						<div class="phone-container">
+						<div class="card-image">
 							<% if $RedirectPage %>
 								<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title page">
-									<img src="$Image.Link" alt="$Image.Title">
+									<img class="img img-raised" src="$Image.Link" alt="$Image.Title">
 								</a>
 							<% else %>
-								<img src="$Image.Link" alt="$Image.Title">
+								<img class="img img-raised" src="$Image.Link" alt="$Image.Title">
 							<% end_if %>
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-5 col-md-offset-1">
 
 						<h2 class="title">$Title</h2>
-						$Content
+						<div class="description">$Content</div>
 
 						<% loop $Features %>
 							<div class="info info-horizontal">
-								<div class="icon icon-primary" <% if $IconColor %>style="color:#{$IconColor};"<% end_if %>>
-									<i class="material-icons">$Icon</i>
+								<div class="icon">
+									<% if $Icon %>
+										<% if $RedirectPage %>
+											<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title">
+												<img class="img" src="$Icon.Link" alt="$Icon.Title" height="50">
+											</a>
+										<% else %>
+											<img class="img" src="$Icon.Link" alt="$Icon.Title" height="50">
+										<% end_if %>
+									<% end_if %>
+
 								</div>
 								<div class="description">
 									<% if $RedirectPage %>

@@ -9,7 +9,8 @@
 }
 .brand h1,
 .brand h1 {
-  font-size: 4.8em;
+  /*font-size: 4.8em;*/
+  font-size: 4em;
   font-weight: 600;
   display: inline-block;
   position: relative;

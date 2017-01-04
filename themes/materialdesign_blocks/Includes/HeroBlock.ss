@@ -60,7 +60,10 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-md-8 <% if $Top.Alignment == 'Center' %>col-md-offset-2 text-center<% else %>text-left<% end_if %>">
-									<h1 class="title">$Title</h1>
+									<div class="brand">
+										<h1>$Title</h1>
+									</div>
+
 									$Content
 									<br />
 
