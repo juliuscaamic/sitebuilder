@@ -9,19 +9,28 @@
 }
 .brand h1,
 .brand h1 {
-  /*font-size: 4.8em;*/
-  font-size: 4em;
-  font-weight: 600;
-  display: inline-block;
-  position: relative;
+	/*font-size: 4.8em;*/
+	font-size: 4em;
+	font-weight: 600;
+	display: inline-block;
+	position: relative;
 }
 .brand h3,
 .brand h3 {
-  font-size: 1.5em;
-  max-width: 490px;
-  margin: 10px auto 0;
+	font-size: 1.5em;
+	max-width: 490px;
+	margin: 10px auto 0;
 }
 
+.btn.btn-primary, .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary.active, .btn.btn-primary:active:focus, .btn.btn-primary:active:hover, .btn.btn-primary.active:focus, .btn.btn-primary.active:hover, .open > .btn.btn-primary.dropdown-toggle, .open > .btn.btn-primary.dropdown-toggle:focus, .open > .btn.btn-primary.dropdown-toggle:hover, .navbar .navbar-nav > li > a.btn.btn-primary, .navbar .navbar-nav > li > a.btn.btn-primary:hover, .navbar .navbar-nav > li > a.btn.btn-primary:focus, .navbar .navbar-nav > li > a.btn.btn-primary:active, .navbar .navbar-nav > li > a.btn.btn-primary.active, .navbar .navbar-nav > li > a.btn.btn-primary:active:focus, .navbar .navbar-nav > li > a.btn.btn-primary:active:hover, .navbar .navbar-nav > li > a.btn.btn-primary.active:focus, .navbar .navbar-nav > li > a.btn.btn-primary.active:hover, .open > .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle, .open > .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle:focus, .open > .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle:hover {
+	background: #019b94 !important;
+}
+.btn.btn-primary, .navbar .navbar-nav > li > a.btn.btn-primary {
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
+}
+.icon.icon-primary {
+	color: #019b94 !important;
+}
 /**
  * Common
  */
@@ -336,6 +345,10 @@ label {
 }
 #contactUsMapBlock .info .title {
 	margin: 25px 0 10px;
+}
+.card .header-primary,
+.card .content-primary {
+  background: linear-gradient(60deg, #019B94, #01b4ac);
 }
 
 /**
