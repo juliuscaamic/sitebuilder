@@ -1,4 +1,4 @@
-<section id="featureBlock" class="section section-content">
+<section id="featureBlock" class="section section-content cd-section <% if $BackgroundImage %>header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor}<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
 	<div class="container">
 		<% if not $Image %>
 			<div class="row">
@@ -10,7 +10,7 @@
 			<% if $Features %>
 				<div class="row">
 					<% loop $Features %>
-						<div class="col-md-3 <% if $Top.Alignment == 'Center' %>text-center<% end_if %>">
+						<div class="col-md-$Top.ColNum() <% if $Top.Alignment == 'Center' %>text-center<% end_if %>">
 						   	<div class="info">
 								<% if $Icon %>
 									<% if $RedirectPage %>

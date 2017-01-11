@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark navbar-fixed-top navbar-color-on-scroll navbar-transparent" style="<% if $NavigationBackgroundColor %>background:#{$NavigationBackgroundColor};<% end_if %>">
+<nav class="navbar navbar-fixed-top <% if $NavigationDisplay == 'Transparent' %>navbar-color-on-scroll navbar-transparent<% end_if %>" style="<% if $NavigationBackgroundColor %>background:#{$NavigationBackgroundColor};<% end_if %>">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
@@ -7,16 +7,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="logo navbar-brand" href="$BaseHref">
-                <img src="$SiteConfig.Logo.Link" alt="$SiteConfig.Title" />
-            </a>
+            <% if $SiteConfig.Logo %>
+	            <a class="logo navbar-brand" href="$BaseHref">
+	                <img src="$SiteConfig.Logo.Link" alt="$SiteConfig.Title" />
+	            </a>
+            <% end_if %>
         </div>
 
         <div class="collapse navbar-collapse" id="navigation-example">
             <ul class="nav navbar-nav navbar-right">
                 <% loop $CurrentPage.Menu(1) %>
                     <li class="<% if $Children %>dropdown<% end_if %>">
-                        <a <% if $Children %>class="dropdown-toggle" data-toggle="dropdown"<% end_if %> href="<% if $Children %>javascript::void();<% else %>$Link<% end_if %>">
+                        <a <% if $Children %>class="dropdown-toggle" data-toggle="dropdown"<% end_if %> href="<% if $Children %>javascript::void();<% else %>$Link<% end_if %>" <% if $Top.NavigationTextColor %>style="color:#{$Top.NavigationTextColor};"<% end_if %>>
                             $MenuTitle.XML
                             <% if $Children %>
                                 <b class="caret"></b>
@@ -70,11 +72,11 @@
 									<% if $Buttons %>
 										<div class="buttons">
 											<% loop $Buttons %>
-												<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title" class="btn btn-primary" style="<% if $BackgroundColor %>background:#{$BackgroundColor}; box-shadow: 0 2px 2px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.14), 0 3px 1px -2px rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.2), 0 1px 5px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.12);<% end_if %><% if $TextColor %>color:#{$TextColor};<% end_if %>">
-													$Title
+												<a href="$RedirectPage.Link" title="Go to $RedirectPage.Title" class="btn btn-lg" style="<% if $BackgroundColor %>background:#{$BackgroundColor}; box-shadow: 0 2px 2px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.14), 0 3px 1px -2px rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.2), 0 1px 5px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.12);<% end_if %><% if $TextColor %>color:#{$TextColor};<% end_if %>">
 													<% if $Icon %>
 														<i class="material-icons">$Icon</i>
 													<% end_if %>
+													$Title
 												</a>
 											<% end_loop %>
 										</div>

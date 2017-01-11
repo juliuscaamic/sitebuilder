@@ -16,4 +16,17 @@ class FeatureBlock extends TextBlock {
 
 		return $fields;
 	}
+
+	/**
+	 * Get column number
+	 *
+	 * @return int
+	 */
+	public function ColNum() {
+		if ($this->Features()) {
+			return 12 / $this->Features()->Count();
+		}
+
+		return 12;
+	}
 }

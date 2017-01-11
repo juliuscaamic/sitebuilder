@@ -1,14 +1,36 @@
 <?php
+/**
+ * Represents the Hero block
+ * 
+ * @author Julius <julius@sentromedia.com>
+ */
 class HeroBlock extends TextBlock {
 
+	/**
+	 * Sets the properties
+	 * 
+	 * @var array
+	 */
 	private static $db = array(
-		'NavigationBackgroundColor' => 'Color'
+		'NavigationDisplay' => 'Enum("Fixed, Transparent", "Fixed")', 
+		'NavigationBackgroundColor' => 'Color', 
+		'NavigationTextColor' => 'Color'
 	);
 
+	/**
+	 * Sets has many
+	 * 
+	 * @var array
+	 */
 	private static $has_many = array(
 		'Banners' => 'BlockBanner'
 	);
 
+	/**
+	 * Get CMS Fields
+	 * 
+	 * @return FieldList
+	 */
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
@@ -21,9 +43,34 @@ class HeroBlock extends TextBlock {
 			array('BackgroundImage', 'BackgroundColor')
 		);
 
+		$fields = $this->getNavigationFields($fields);
+
+		return $fields;
+	}
+
+	/**
+	 * Get Navigation Fields
+	 * 
+	 * @param  [type] &$fields [description]
+	 * @return FieldList
+	 */
+	private function getNavigationFields(&$fields) {
 		$fields->addFieldToTab(
-			'Root.Color', 
-			$fields->dataFieldByName('NavigationBackgroundColor', 'Nav Background Color')
+			'Root.Navigation', 
+			$fields->dataFieldByName('NavigationDisplay')
+				->setTitle('Display')
+		);
+
+		$fields->addFieldToTab(
+			'Root.Navigation', 
+			$fields->dataFieldByName('NavigationBackgroundColor')
+				->setTitle('Background Color')
+		);
+
+		$fields->addFieldToTab(
+			'Root.Navigation', 
+			$fields->dataFieldByName('NavigationTextColor')
+				->setTitle('Text Color')
 		);
 
 		return $fields;

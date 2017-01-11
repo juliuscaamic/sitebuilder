@@ -8,10 +8,26 @@ class CardBlock extends TextBlock {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		$fields->dataFieldByName('Cards')
-			->getConfig()
-			->addComponent(new GridFieldOrderableRows('Sort'));
+		if ($this->ID) {
+			$fields->dataFieldByName('Cards')
+				->getConfig()
+				->addComponent(new GridFieldOrderableRows('Sort'));
+		}
 
 		return $fields;
 	}
+
+	/**
+	 * Get column number
+	 *
+	 * @return int
+	 */
+	public function ColNum() {
+		if ($this->Cards()) {
+			return 12 / $this->Cards()->Count();
+		}
+
+		return 12;
+	}
+
 }

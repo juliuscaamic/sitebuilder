@@ -1,15 +1,12 @@
 <?php
-class FormBlock extends Block {
+class Client extends DataObject {
 
 	private static $db = array(
-		'Content' => 'HTMLText'
+		'Title' => 'Varchar'
 	);
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-
-		$fields->dataFieldByName('Content')
-			->setRows(20);
 
 		return $fields;
 	}

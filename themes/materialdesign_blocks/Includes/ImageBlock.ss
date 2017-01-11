@@ -1,4 +1,4 @@
-<section class="section section-content cd-section imageblock <% if $BackgroundImage %>header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor}<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
+<section id="imageblock" class="section section-content cd-section <% if $BackgroundImage %>header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor}<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
 	<div class="container">
 		<div class="card card-plain card-blog">
 			<div class="row">
@@ -9,18 +9,18 @@
 						</div>
 					</div>
 					<div class="col-md-6 col-md-offset-1">
-						<h2 class="card-title">$Title</h2>
-						<div class="card-description">
+						<h2 class="card-title" <% if $TextColor %>style="color:#{$TextColor};"<% end_if %>>$Title</h2>
+						<div class="card-description" <% if $TextColor %>style="color:#{$TextColor};"<% end_if %>>
 							$Content
 						</div>
 
 						<% if $Buttons %>
 							<% loop $Buttons %>
-								<a class="btn btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title" style="<% if $BackgroundColor %>background:#{$BackgroundColor}; box-shadow: 0 2px 2px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.14), 0 3px 1px -2px rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.2), 0 1px 5px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.12);<% end_if %><% if $TextColor %>color:#{$TextColor};<% end_if %>">
-									$Title 
+								<a class="btn" href="$RedirectPage.Link" title="Go to $RedirectPage.Title" style="<% if $BackgroundColor %>background:#{$BackgroundColor}; box-shadow: 0 2px 2px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.14), 0 3px 1px -2px rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.2), 0 1px 5px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.12);<% end_if %><% if $TextColor %>color:#{$TextColor};<% end_if %>">
 									<% if $Icon %>
 										<i class="material-icons">$Icon</i>
 									<% end_if %>
+									$Title 
 								</a>
 							<% end_loop %>
 						<% end_if %>
@@ -28,16 +28,17 @@
 					</div>
 				<% else_if $ImageRight %>
 					<div class="col-md-6">
-						<h2 class="card-title">$Title</h2>
-						<div class="card-description">$Content</div>
+						<h2 class="card-title" <% if $TextColor %>style="color:#{$TextColor};"<% end_if %>>$Title</h2>
+						<div class="card-description" <% if $TextColor %>style="color:#{$TextColor};"<% end_if %>>$Content</div>
 
 						<% if $Buttons %>
 							<% loop $Buttons %>
-								<a class="btn btn-lg btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title" style="<% if $BackgroundColor %>background:#{$BackgroundColor}; box-shadow: 0 2px 2px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.14), 0 3px 1px -2px rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.2), 0 1px 5px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.12);<% end_if %><% if $TextColor %>color:#{$TextColor};<% end_if %>">
-									$Title 
+								<a class="btn btn-lg" href="$RedirectPage.Link" title="Go to $RedirectPage.Title" style="<% if $BackgroundColor %>background:#{$BackgroundColor}; box-shadow: 0 2px 2px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.14), 0 3px 1px -2px rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.2), 0 1px 5px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.12);<% end_if %><% if $TextColor %>color:#{$TextColor};<% end_if %>">
 									<% if $Icon %>
 										<i class="material-icons">$Icon</i>
 									<% end_if %>
+
+									$Title 
 								</a>
 							<% end_loop %>
 						<% end_if %>
@@ -54,18 +55,18 @@
 							<img class="img img-raised" src="$Image.Link" alt="$Image.Title">
 						</div>
 						<br>
-						<h2 class="card-title">$Title</h2>
-						<div class="card-description">
+						<h2 class="card-title" <% if $TextColor %>style="color:#{$TextColor};"<% end_if %>>$Title</h2>
+						<div class="card-description" <% if $TextColor %>style="color:#{$TextColor};"<% end_if %>>
 							$Content
 						</div>
 
 						<% if $Buttons %>
 							<% loop $Buttons %>
-								<a class="btn btn-primary" href="$RedirectPage.Link" title="Go to $RedirectPage.Title" style="<% if $BackgroundColor %>background:#{$BackgroundColor}; box-shadow: 0 2px 2px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.14), 0 3px 1px -2px rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.2), 0 1px 5px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.12);<% end_if %><% if $TextColor %>color:#{$TextColor};<% end_if %>">
-									$Title 
+								<a class="btn" href="$RedirectPage.Link" title="Go to $RedirectPage.Title" style="<% if $BackgroundColor %>background:#{$BackgroundColor}; box-shadow: 0 2px 2px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.14), 0 3px 1px -2px rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.2), 0 1px 5px 0 rgba($BackgroundColor.Red, $BackgroundColor.Green, $BackgroundColor.Blue, 0.12);<% end_if %><% if $TextColor %>color:#{$TextColor};<% end_if %>">
 									<% if $Icon %>
 										<i class="material-icons">$Icon</i>
 									<% end_if %>
+									$Title 
 								</a>
 							<% end_loop %>
 						<% end_if %>								

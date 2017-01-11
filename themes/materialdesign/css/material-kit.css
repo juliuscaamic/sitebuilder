@@ -4641,7 +4641,7 @@ select[data-dropdownjs][disabled] + .dropdownjs > input[readonly] {
   color: #FFFFFF;
 }
 .page-header.header-small {
-  height: 65vh;
+  height: 50vh !important;
 }
 .page-header.header-small .container {
   padding-top: 20vh;

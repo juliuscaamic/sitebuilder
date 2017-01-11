@@ -15,4 +15,18 @@ class TestimonialBlock extends TextBlock {
 
 		return $fields;
 	}
+
+	/**
+	 * Get column number
+	 *
+	 * @return int
+	 */
+	public function ColNum() {
+		if ($this->Testimonials()) {
+			return 12 / $this->Testimonials()->Count();
+		}
+
+		return 12;
+	}
+
 }

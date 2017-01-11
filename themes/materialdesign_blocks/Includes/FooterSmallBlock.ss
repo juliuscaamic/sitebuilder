@@ -1,4 +1,4 @@
-<footer id="footerSmallBlock" class="footer <% if $BackgroundImage || $BackgroundColor %>footer-black header-filter<% end_if %>" style="background-color: <% if $BackgroundColor %>#{$BackgroundColor} !important;<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
+<footer id="footerSmallBlock" class="footer <% if $BackgroundImage %>header-filter<% end_if %>" style="background: <% if $BackgroundColor %>#{$BackgroundColor}<% end_if %> <% if $BackgroundImage %>url('$BackgroundImage.Link')<% end_if %>;">
 	<div class="container">
 		<nav class="pull-left">
 			<% if $MenuPages %>
