@@ -3,7 +3,8 @@ class ContentBlock_Extension extends DataExtension {
 
 	private static $db = array(
 		'BackgroundColor' => 'Color', 
-		'Alignment' => 'Enum("Left, Center", "Left")'
+		'Alignment' => 'Enum("Left, Center", "Left")', 
+		'Display' => 'Enum("Section, Popup", "Section")'
 	);
 
 	private static $has_one= array(
@@ -15,6 +16,11 @@ class ContentBlock_Extension extends DataExtension {
 	);
 
 	public function updateCMSFields(FieldList $fields) {
+
+		$fields->insertAfter(
+			'ClassName', 
+			DropdownField::create('Display', 'Block Display', $this->owner->dbObject('Display')->enumValues())
+		);
 
 		$fields->insertBefore(
 			'BackgroundImage', 

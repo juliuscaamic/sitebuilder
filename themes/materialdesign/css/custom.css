@@ -371,8 +371,16 @@ label {
 .pagination > li > span {font-size: 14px;}
 
 /**
+ * Modal Sections
+ */
+div.modal-backdrop {z-index: -1040 !important;}
+div.modal-form {width: 480px !important;}
+div.modal-body {padding-top: 0 !important;}
+
+/**
  * Footer Block
  */
+.footer {color: #909090 !important;}
 .footer .copyright p {
 	font-size: 12px;
 	margin: 0;
